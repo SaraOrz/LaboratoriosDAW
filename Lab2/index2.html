@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel = "stylesheet" href = "style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Curriculum Vitae</title>
 </head>
 <body>
-    <div id = "upper_part" style = "color:steelblue">
-        <center>
+    <div id = "head">
             <header>
                 <h1>Sarai Obregón Rodríguez</h1>
                 <h3>Ing. en Sistemas Digitales y Robótica</h3>
             </header>
             <nav>
-                <a href = "https://samp.itesm.mx/Programas/VistaPrograma?clave=ISD11&modoVista=Areas&idioma=ES&cols=0" style = "color:steelblue" target="_blank">Plan de estudios de mi carrera</a><br>
-                <a href = "https://www.anspac.org.mx/" style = "color:steelblue" target="_blank">Mi Servicio Social</a>
+                <a href = "https://samp.itesm.mx/Programas/VistaPrograma?clave=ISD11&modoVista=Areas&idioma=ES&cols=0" target="_blank">Plan de estudios de mi carrera</a><br>
+                <a href = "https://www.anspac.org.mx/" target="_blank">Mi Servicio Social</a>
             </nav>
-        </center>
     </div>
-    <main style = "color: darkslategray">
+
+    <main>
+        <section id = "Cat">
+            <img src = "cat.jfif" width = "400" height="400" alt = "Cat">
+            <p id = "cattext">This is me :) </p>
+        </section>
+
         <section id = "About">
             <h2>About Me</h2>
-            <p><dd>I am a participative leader, a fan of challenges and innovation. My mission is to <span style = "color: rgb(241, 76, 0)"> create solutions to 
+            <p id = "p1">I am a participative leader, a fan of challenges and innovation. My mission is to <span style = "color: rgb(241, 76, 0)"> create solutions to 
                 improve industrial processes and the use of resources in my region.</span> I want to contribute with ideas 
                 that help in the development of new technologies and systems that guide us towards a sustainable 
                 future with better quality of life. I adapt easily, with the firm purpose of learning at every step 
                 I take.</dd></p>
         </section>
-        <section id = "Education">
+        
+        <section id = "EdExp">
             <h2>Education</h2>
             <p>2018 <b> Digital Systems and Robotics Engineering</b></p>
             <p><dd>Tecnológico de Monterrey Campus Querétaro</dd></p>
+            <h2>Professional Experience</h2>
+            <p>2021 <b>Second stage development of attribute encoding software for iRAP</b></p>
+            <p><dd>Instituto Mexicano del Transporte</dd></p>
         </section>
-        <section id = "Additional Preparation">
+
+        <section id = "AddPrep">
             <h2>Additional Preparation</h2>
             <p>2020 <b>Design and Installation of Photovoltaic Systems connected to the power grid</b></p>
             <p><dd>Interamericana Solar</dd></p>
             <p>2021 <b> Philanthropy Coordinator</b></p>
             <p><dd>Cancercom</dd></p>            
         </section>
-        <section id = "Professional Experience">
-            <h2>Professional Experience</h2>
-            <p>2021 <b>Second stage development of attribute encoding software for iRAP</b></p>
-            <p><dd>Instituto Mexicano del Transporte</dd></p>
-        </section>
+        
         <section id = "Languages">
-            <h2>Languages</h2>
+            <h2>Languages:</h2>
             <ol>
-                <li>Spanish</li>
-                <li>English</li>
-                <li>French</li>
+                <li>1. Spanish</li>
+                <li>2. English</li>
+                <li>3. French</li>
             </ol>
         </section>
 
     </main>
-    <center>
+    <div id = "bottom">
         <address>
-            <table border = "0px">
-                <tr>
-                    <td><a title = "Linkedin" href = "https://www.linkedin.com/in/saraiobregonr" target="_blank"><img src = "in.png" width = "30" height="30" alt = "LinkedIn"></a></td>
-                    <td><a title = "Mail" href = "mailto:a01704432@tec.mx"><img src = "gmail.png" width="40" height="40" alt = "e-mail"></a></td>
-                </tr>
-            </table>
+            <a title = "Linkedin" href = "https://www.linkedin.com/in/saraiobregonr" target="_blank"><img src = "in.png" width = "50" height="50" alt = "LinkedIn"></a>
+            <a title = "Mail" href = "mailto:a01704432@tec.mx"><img src = "gmail.png" width="60" height="50" alt = "e-mail"></a>
         </address>
         <footer>
-            <p style="color: steelblue">Laboratorio #1 de <span style="font-weight: bold">DAW</span> :)</p>    
+            <p id = "foot">Laboratorio #2 de DAW</span> :)</p>    
         </footer>
-    </center>
+    </div>
     
     
 </body>

@@ -1,2 +1,2 @@
 Sarai Obregón
-# LaboratoriosDAW
+# Laboratorios Desarrollo de Aplicaciones Web

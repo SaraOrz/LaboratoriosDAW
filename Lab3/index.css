@@ -33,7 +33,7 @@ body {
   }
 
   .menu{
-    /* The menu (bullets) is not shown in this mediw view*/
+    /* The menu (bullets) is not shown in this media view*/
     display: none;
   }
 
@@ -73,7 +73,7 @@ body {
   }
 
   .menu{
-    /* The menu (bullets) is not shown in this mediw view*/
+    /* The menu (bullets) is not shown in this media view*/
     display: none;
   }
 
@@ -104,6 +104,60 @@ body {
 }
 
 @media (min-width: 1025px) {
-  
+
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 200px;
+  }
+
+  nav{
+    background-color: gray;
+    margin-bottom: 12px;
+  }
+
+  .hamburger{
+    /* The hamburger menu is not shown in this media view*/
+    display: none;
+  }
+
+  .menu{
+    display: flex;
+    justify-content: space-evenly; 
+    margin-left: 70%;
+    padding: 15px;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  main{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .product{
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 30%;
+  }
+
+  p{
+    text-align: left;
+    margin-left: 7px;
+    margin-right: 3px;
+  }
+
+  .social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 15px;
+    list-style: none;
+    border-top: 3px solid rgb(196, 196, 196);
+  }
 }
 

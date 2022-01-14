@@ -12,3 +12,49 @@ body {
   width: 50px;
 }
 
+/* Default media view is on a mobile device */
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav{
+  background-color: gray;
+  margin-left: 10px; /* The gray area is slightly moved to the right*/
+}
+
+.hamburger{
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+}
+
+.menu{
+  /* The menu (bullets) is not shown in this mediw view*/
+  display: none;
+}
+
+.product{
+  text-align: center;
+  border: 1px solid gray;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 10px;
+  list-style: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) {
+  
+}
+

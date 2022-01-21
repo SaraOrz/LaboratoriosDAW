@@ -32,8 +32,10 @@ fieldset{
     font-size: 1em;
     padding: 5px 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
     width: 90%;
+    margin-bottom: 10px;
+
+    
 }
 
 .wrapper {

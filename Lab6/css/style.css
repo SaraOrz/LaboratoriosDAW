@@ -47,6 +47,7 @@ button{
     color: white;
     border-radius: 5px;
     text-align: center;
+    
 }
 .checar:hover{
     background-color:#56E56F;
@@ -58,6 +59,7 @@ button{
 }
 .chec > p{
     text-decoration: line-through;
+
 }.itemShop{
     font-style: italic;
 }

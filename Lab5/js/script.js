@@ -1,47 +1,44 @@
-let post  = document.getElementById("ButtonPost");
-let clear  = document.getElementById("ButtonClear");
-let mark  = document.getElementById("ButtonMark");
-let del  = document.getElementById("ButtonDelete");
+var qtodo = 0
 
-post.addEventListener("click",TodoPost);
-clear.addEventListener("click",TodoClear);
-mark.addEventListener("click",TodoMark);
-del.addEventListener("click",TodoDel);
+// Post
+$("#ButtonPost").on("click", function(event) {
+    event.preventDefault()
+    let todo = $("#todoText").val()
 
-
-function TodoPost(e){
-e.preventDefault();
-// Necesito obtener el valor de la caja
-var todo = document.getElementById("todoText").value;
-var list = document.getElementById("todoList");
-
-let currentListHTML = list.innerHTML;
-list.innerHTML = currentListHTML + '<input type = "checkbox" name="todo" /> ' + todo + '<br>';
-
-// Clear To Do input 
-document.getElementById("todoText").value = ''
-
-}
-
-
-function TodoClear(e){
-    e.preventDefault();
-    var todos = document.getElementsByName("todo");
-    for(var i = 0; i < todos.length; i++){
-        todos[i].checked = false;
+    if (todo != ""){
+        
+        $("#todoList").prepend('<input type="checkbox" /> ' + todo + '<br />')
+        
+        qtodo++
+        $("#todoText").val("")
     }
-}
+})
 
-function TodoMark(e){
-    e.preventDefault();
-    var todos = document.getElementsByName("todo");
-    for(var i = 0; i < todos.length; i++){
-        todos[i].checked = true;
-    }
-}
+// Clear All
+$("#ButtonClear").on("click", function(event) {
+    event.preventDefault()
+    let list = $("#todoList")
 
-function TodoDel(e){
-    e.preventDefault();
-    var list = document.getElementById("todoList");
-    list.innerHTML = "";
-}
+    $(":checkbox").prop('checked', false);
+})
+
+// Mark All
+$("#ButtonMark").on("click", function(event) {
+    event.preventDefault()
+    let list = $("#todoList")
+    
+    $(":checkbox").prop('checked', true);
+    
+})
+
+// Delete All
+$("#ButtonDelete").on("click", function(event) {
+    event.preventDefault()
+    $("#todoList").html("")
+    qtodo = 0
+})
+
+//------
+
+
+

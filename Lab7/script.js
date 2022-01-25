@@ -6,11 +6,13 @@ $(document).ready(function() {
                     "Tangled","Dory","Grogu","The Incredibles"]
 
 
+    // Funciones onload
     $(function(){
         createButtons();
     });
-    
 
+
+    // Crear botones
     var createButtons = function (){ 
         for (let i = 0 ; i < disney.length ; i++) {
             let a = $("<button>")
@@ -21,7 +23,7 @@ $(document).ready(function() {
         }
     }
 
-
+    // Botones GIFs
     $("#disney-buttons").on("click", ".disney-button", function() {
         $("#disney").empty()
         // empty para que siempre se limpie
@@ -51,15 +53,19 @@ $(document).ready(function() {
                 $("#disney").append(disneyDiv)
             }
         })
-
     }) 
 
-    /*
-    $(".disney-item").on("click", function() { 
-        alert(imagen)
-    })
-     */
 
+
+    // Reproducir/Pausar GIFs
+    $("#disney").on("click",  "img",  function() { 
+
+        alert("imagen")
+    })
+     
+
+
+    // Botón Submit
     $("#add-disney").on("click",function(event) { 
         event.preventDefault()
 

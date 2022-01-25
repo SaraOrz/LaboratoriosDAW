@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     let disney_input = $("#disney-input")
  
     let disney = ["Kuzco","Groot","Mulan","Baymax","Aristocats",
@@ -59,7 +60,8 @@ $(document).ready(function() {
 
     // Reproducir/Pausar GIFs
     $("#disney").on("click",  "img",  function() { 
-
+        
+        
         alert("imagen")
     })
      

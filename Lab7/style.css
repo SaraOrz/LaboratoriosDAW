@@ -1,3 +1,7 @@
+* {
+  background-color: rgb(186, 206, 218);
+}
+
 body {
   font: 18px arial, sans-serif;
   background: #eee;
@@ -22,6 +26,7 @@ label {
   display: block;
   margin-bottom: 10px;
   font-weight: 700;
+  color: #334e4d;
 }
 
 input[type="text"] {
@@ -29,6 +34,7 @@ input[type="text"] {
   height: 30px;
   margin-bottom: 10px;
   font-size: 18px;
+  background-color: #fdd85e;
 }
 
 button,

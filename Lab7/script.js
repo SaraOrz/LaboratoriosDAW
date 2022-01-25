@@ -1,16 +1,26 @@
 $(document).ready(function() {
+
+    let disney_input = $("#disney-input")
  
     let disney = ["Kuzco","Groot","Mulan","Baymax","Aristocats",
                     "Tangled","Dory","Grogu","The Incredibles"]
 
 
-    for (let i = 0 ; i < disney.length ; i++) {
-        let a = $("<button>")
-        a.addClass("disney-button")
-        a.attr("data-type",disney[i])
-        a.text(disney[i])
-        $("#disney-buttons").append(a)
+    $(function(){
+        createButtons();
+    });
+    
+
+    var createButtons = function (){ 
+        for (let i = 0 ; i < disney.length ; i++) {
+            let a = $("<button>")
+            a.addClass("disney-button")
+            a.attr("data-type",disney[i])
+            a.text(disney[i])
+            $("#disney-buttons").append(a)
+        }
     }
+
 
     $("#disney-buttons").on("click", ".disney-button", function() {
         $("#disney").empty()
@@ -18,7 +28,7 @@ $(document).ready(function() {
         let search = $(this).attr("data-type")
         let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + search + "&api_key=EOV4Au9dpzZ44GC4fEYk6ugWbGrwf0Yd&limit=10"
 
-        // alert(queryURL)
+        //alert(queryURL)
 
         $.ajax({
             url: queryURL
@@ -43,7 +53,27 @@ $(document).ready(function() {
         })
 
     }) 
-         
-});
+
+    /*
+    $(".disney-item").on("click", function() { 
+        alert(imagen)
+    })
+     */
+
+    $("#add-disney").on("click",function(event) { 
+        event.preventDefault()
+
+        if (disney_input[0].value != ""){
+            disney.push(disney_input[0].value)
+                        
+            // LIMPIAR INPUT
+            $("#disney-input").val("")  
+
+            $("#disney-buttons").empty()
+            createButtons()
+        }
+    })
+
+})
 
 

@@ -3,8 +3,8 @@ $(document).ready(function() {
 
     let disney_input = $("#disney-input")
  
-    let disney = ["Kuzco","Groot","Mulan","Baymax","Aristocats",
-                    "Tangled","Dory","Grogu","The Incredibles"]
+    let disney = ["Kuzco","Groot","Mulan","Baymax","Grogu", 
+                "Aristocats","Tangled","Dory", "Brother Bear"]
 
 
     // Funciones onload
@@ -60,9 +60,20 @@ $(document).ready(function() {
 
     // Reproducir/Pausar GIFs
     $("#disney").on("click",  "img",  function() { 
-        
-        
-        alert("imagen")
+        var state = $(this).data("state")
+        var stillURL = $(this).data("still")
+        var animateURL = $(this).data("animate")
+
+        if (state == "still") {
+            $(this).data("state", "animate")
+            $(this).attr("src",animateURL)
+
+        } else {
+            $(this).data("state", "still")
+            $(this).attr("src",stillURL)    
+        }
+
+        //alert("image")
     })
      
 
